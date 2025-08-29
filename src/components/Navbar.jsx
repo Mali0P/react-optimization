@@ -7,13 +7,13 @@ export default function Navbar() {
       <div className="text-4xl">Logo</div>
       <ul className="flex gap-10">
         <li>
-          <NavLink to={"/"}>Home</NavLink>
+          <NavLink className={({isActive})=> isActive?'text-[red]':''} to={"/"}>Home</NavLink>
         </li>
         <li>
-          <NavLink to={"/about"}>About</NavLink>
+          <NavLink to={"/about"} className={({isActive})=> isActive?'text-[red]':''}>About</NavLink>
         </li>
         <li>
-          <NavLink to={"/contact"}>Contact</NavLink>
+          <NavLink to={"/contact"} className={({isActive})=> isActive?'text-[red]':''}>Contact</NavLink>
         </li>
       </ul>
       <div>Sign In</div>
