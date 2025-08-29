@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer container{
+    .container{
+        @apply flex justify-center items-center h-[80vh] text-5xl
+    }
+}
