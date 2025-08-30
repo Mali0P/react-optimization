@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import { photosStore } from "../store/photosStore";
 
 const PhotosList = lazy(()=>import('../components/PhotosList')) 
@@ -11,9 +11,11 @@ await fetchPhotos()
 setShowPhotos(true)
   };
 
+
   return (
-    <div className="container flex-col">
-      <div>Home</div>
+ <div className="container mt-8 flex-col min-h-screen py-10">
+
+      <div>Home / Lazy Loading</div>
       <div>
          {showPhotos ? (
     <Suspense fallback={<div>Loading images...</div>}>

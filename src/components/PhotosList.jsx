@@ -5,13 +5,12 @@ export default function PhotosList() {
   const { photos } = photosStore();
 
   return (
-    <ul className='text-sm grid grid-cols-3 grid-rows-3 gap-10 my-10'>
+    <div className='text-sm  w-[90vw] grid grid-cols-3 grid-rows-3 gap-10 my-10'>
       {photos.map((val, id) => (
-        <li key={id}>
-
-        <img src={val.thumbnailUrl} width={100} height={100} alt="" />
-        </li>
+        <div key={id} className='mt-8'>
+        <img src={val.images[0]}  alt="" className='object-cover w-[100%] h-60' />
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
