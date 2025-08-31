@@ -15,6 +15,9 @@ export default function Navbar() {
         <li>
           <NavLink to={"/contact"} className={({isActive})=> isActive?'text-[red]':''}>Contact</NavLink>
         </li>
+        <li>
+          <NavLink to={"/category"} className={({isActive})=> isActive?'text-[red]':''}>Category</NavLink>
+        </li>
       </ul>
       <div>Sign In</div>
     </nav>

@@ -4,6 +4,7 @@ import "./index.css";
 import React from "react";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Category from "./pages/Category.jsx";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 const About = lazy(() => import("./pages/About.jsx"));
@@ -25,6 +26,10 @@ const allRouters = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path:'/category',
+        element:<Category/>
+      }
     ],
   },
 ]);
